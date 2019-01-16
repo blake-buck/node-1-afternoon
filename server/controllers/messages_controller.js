@@ -12,7 +12,7 @@ module.exports = {
 	},
 	updateMessage:(req, res)=>{
 		var updateID = messages.findIndex( (val) => val.id===req.params.id);
-		messages[req.params.id].text = req.body.text;
+		messages[updateID].text = req.body.text;
 		res.json(messages);
 	},
 	deleteMessage:(req, res)=>{
